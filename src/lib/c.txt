@@ -1,0 +1,26 @@
+import 'dotenv/config'; 
+import { GoogleGenerativeAI } from '@google/generative-ai';
+
+console.log(process.env.API_KEY);
+const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+const prompt = "";
+
+async function getResponse(prompt) {
+    const result = await model.generateContent(prompt);
+    console.log(result);
+    return result.response.text();
+}
+
+// Execute and log the result
+async function run() {
+    try {
+        const responseText = await getResponse(prompt);
+        console.log(responseText);
+    } catch (error) {
+        console.error('Error generating content:', error);
+    }
+}
+
+run();
