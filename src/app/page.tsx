@@ -138,7 +138,7 @@ export default function StoryGenerator() {
               Craft Your Tale
             </CardTitle>
             <CardDescription className="text-slate-600">
-              Shape your story's elements and let our AI weave a unique narrative for you!
+              Shape your story&apos;s elements and let our AI weave a unique narrative for you!
             </CardDescription>
           </CardHeader>
           <CardContent>
